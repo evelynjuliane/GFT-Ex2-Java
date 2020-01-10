@@ -9,11 +9,16 @@ public class Carro extends Veiculo {
 	public Carro() {
 	}
 
-	public Carro(String marca, int portas, String ano) {
+
+
+	public Carro(String modelo, int velocidade, int passageiros, int combustivel, String marca, int portas, String ano) {
+		super(modelo, velocidade, passageiros, combustivel);
 		this.marca = marca;
 		this.portas = portas;
 		this.ano = ano;
 	}
+
+
 
 	public String getMarca() {
 		return marca;
@@ -39,7 +44,8 @@ public class Carro extends Veiculo {
 		this.ano = ano;
 	}
 	
-	public void imprimeCarro() {
-		System.out.println(marca + "\n" + getModelo() +"\n"+ getPassageiros() + "\n" + portas + "\n" + ano);
+	public void imprime() {
+		super.imprime();
+		System.out.println("Marca: " + marca +"\nPortas:" + portas + "\nAno" + ano);
 	}
 }

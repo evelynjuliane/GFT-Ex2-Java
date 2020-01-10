@@ -50,5 +50,8 @@ public class Veiculo {
 		this.combustivel = combustivel;
 	}
 	
-
+	public void imprime() {
+		System.out.println("Modelo:" + modelo + "\nvelocidade:" + velocidade + "\npassageiros:" + passageiros 
+				+ "\ncombustivel:" + combustivel);
+	}
 }

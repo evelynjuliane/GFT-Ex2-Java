@@ -9,13 +9,15 @@ public class Aviao extends Veiculo {
 	
 	public Aviao() {
 	}
-	public Aviao(String tipo, String uso) {
+	public Aviao(String modelo, int velocidade, int passageiros, int combustivel, String tipo, String uso) {
+		super(modelo, velocidade, passageiros, combustivel);
 		this.tipo = tipo;
 		this.uso = uso;
 	}
 	
 	//GETTERS AND SETTERS
 	
+
 	public String getTipo() {
 		return tipo;
 	}
@@ -29,14 +31,9 @@ public class Aviao extends Veiculo {
 		this.uso = uso;
 	}
 	
-	public void imprimeAviao() {
-		System.out.println(tipo
-				+"\n"
-				+ getModelo() 
-				+"\n"
-				+ getPassageiros()
-				+"\n"
-				+ uso);
+	public void imprime() {
+		super.imprime();
+		System.out.println("Tipo: " + tipo +"\nUso:" + uso);
 	}
 	
 }
